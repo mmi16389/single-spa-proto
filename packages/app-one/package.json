@@ -1,15 +1,17 @@
 {
-  "name": "app-one",
+  "name": "@cnamts/app-one",
   "version": "0.1.0",
   "private": true,
+  "main": "dist/single-spa-vue-app.umd.js",
   "scripts": {
     "serve": "vue-cli-service serve --port 8081",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --target lib --formats umd --name single-spa-vue-app src/main.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^3.6.5",
     "single-spa-vue": "^1.9.0",
+    "systemjs": "^6.7.1",
     "systemjs-webpack-interop": "^2.1.2",
     "vue": "^2.6.11"
   },

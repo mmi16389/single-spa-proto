@@ -1,19 +1,24 @@
-// Temporary until we can use https://github.com/webpack/webpack-dev-server/pull/2143
+const path = require("path");
+const webpack = require("webpack");
+
 module.exports = {
-  chainWebpack: (config) => {
-    config.devServer.set("inline", false);
-    config.devServer.set("hot", true);
-    // Vue CLI 4 output filename is js/[chunkName].js, different from Vue CLI 3
-    // More Detail: https://github.com/vuejs/vue-cli/blob/master/packages/%40vue/cli-service/lib/config/app.js#L29
-    if (process.env.NODE_ENV !== "production") {
-      config.output.filename("js/[name].js");
-    }
-    config.externals(["vue"]);
+  devServer: {
+    writeToDisk: true,
   },
   configureWebpack: {
-    module: {
-      rules: [{ parser: { system: false } }],
+    output: {
+      library: "single-spa-vue-app",
+      libraryTarget: "umd",
+      filename: "single-spa-vue-app.js",
+      path: path.resolve(__dirname, "dist"),
     },
+    plugins: [
+      new webpack.optimize.LimitChunkCountPlugin({
+        maxChunks: 1,
+      }),
+    ],
   },
-  filenameHashing: false,
+  chainWebpack: (config) => {
+    config.externals(["single-spa-vue", "vue", "vue-router"]);
+  },
 };
