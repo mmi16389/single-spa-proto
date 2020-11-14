@@ -2,10 +2,10 @@ const path = require("path");
 const webpack = require("webpack");
 
 module.exports = {
-	devServer: {
-		writeToDisk: true,
-	},
-	chainWebpack: (config) => {
-		config.externals(["vue", "vue-router", "vue-i18n"]);
-	},
+  devServer: {
+    writeToDisk: true,
+  },
+  chainWebpack: (config) => {
+    config.externals(["vuetify", "vue", "vue-router", "vue-toastr"]);
+  },
 };

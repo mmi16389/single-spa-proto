@@ -1,25 +1,29 @@
 # layout-app
 
-> My striking project
+## Project setup
 
-## Configure config.js
-
-This is done automatically, but if you want to setup this manually, you should copy the file `public/js/config.js.dist` and rename it to `public/js/config.js`.
-
-You can customize the variables in `config.js` if needed.
-
-## Build Setup
-
-```bash
-# Install dependencies
-$ yarn install
-
-# Serve with hot reload
-$ yarn run serve
-
-# Build for production
-$ yarn run build
-
-# Lint & fix
-$ yarn run lint
 ```
+yarn install
+```
+
+### Compiles and hot-reloads for development
+
+```
+yarn serve
+```
+
+### Compiles and minifies for production
+
+```
+yarn build
+```
+
+### Lints and fixes files
+
+```
+yarn lint
+```
+
+### Customize configuration
+
+See [Configuration Reference](https://cli.vuejs.org/config/).

@@ -1,84 +1,57 @@
 <template>
-	<!-- VApp is an element which is required to use Vuetify. See https://vuetifyjs.com/en/ for help -->
-	<VApp v-cloak class="main-ctn">
-		<AppHeader />
+  <v-app>
+    <v-app-bar app color="primary" dark>
+      <div class="d-flex align-center">
+        <v-img
+          alt="Vuetify Logo"
+          class="shrink mr-2"
+          contain
+          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+          transition="scale-transition"
+          width="40"
+        />
 
-		<AppToolbar />
+        <v-img
+          alt="Vuetify Name"
+          class="shrink mt-1 hidden-sm-and-down"
+          contain
+          min-width="100"
+          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
+          width="100"
+        />
+      </div>
 
-		<NotificationBar />
+      <v-spacer></v-spacer>
 
-		<VMain>
-			<div
-				v-for="link in links"
-				:id="link.to.name"
-				:key="link.label"
-				v-bind="link.options"
-			/>
-			<!-- Load the component defined in the router for the current route -->
-			<!-- <RouterView /> -->
-		</VMain>
+      <v-btn
+        href="https://github.com/vuetifyjs/vuetify/releases/latest"
+        target="_blank"
+        text
+      >
+        <span class="mr-2">Latest Release</span>
+        <v-icon>fa-external-link</v-icon>
+      </v-btn>
+    </v-app-bar>
 
-		<AppFooter v-if="!maintenance" />
-	</VApp>
+    <v-main>
+      <HelloWorld />
+    </v-main>
+  </v-app>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import Component from "vue-class-component";
+import HelloWorld from "./components/HelloWorld.vue";
 
-import { Meta, MetaInfo } from "./decorators";
+export default Vue.extend({
+  name: "App",
 
-// Static import for faster rendering
-import { AppHeader, AppToolbar, AppFooter } from "./components/layout";
+  components: {
+    HelloWorld,
+  },
 
-import { Options } from "@cnamts/vue-dot/src/mixins/customizable";
-
-interface ToolbarLink {
-	label: string;
-	to?: {
-		name: string;
-	};
-	options?: Options;
-}
-
-// Env var
-declare const MAINTENANCE: string;
-
-/** App is the main component */
-@Component({
-	components: {
-		AppHeader,
-		AppToolbar,
-		AppFooter,
-	},
-})
-export default class App extends Vue {
-	get links(): ToolbarLink[] {
-		return (this.$t(
-			"components.layout.appToolbar.links"
-		) as unknown) as ToolbarLink[];
-	}
-
-	get maintenance(): boolean {
-		return MAINTENANCE === "true";
-	}
-
-	/** The meta informations of the route */
-	/* istanbul ignore next */
-	@Meta
-	metaInfo(): MetaInfo {
-		return {
-			// If no sub-components specify a metaInfo.title, this title will be used
-			title: this.$t("common.meta.title") as string,
-			// All titles will be injected into this template
-			titleTemplate: this.$t("common.meta.titleTemplate") as string,
-			meta: [
-				{
-					name: "description",
-					content: this.$t("common.meta.description") as string,
-				},
-			],
-		};
-	}
-}
+  data: () => ({
+    //
+  }),
+});
 </script>

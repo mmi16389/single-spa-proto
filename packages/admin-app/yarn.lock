@@ -10150,6 +10150,11 @@ single-spa-vue@^1.9.0:
   resolved "https://registry.yarnpkg.com/single-spa-vue/-/single-spa-vue-1.10.1.tgz#80cbb603dc8eaec4148577b3570fa04b2d45ee16"
   integrity sha512-a9HDjscAIjtbIpIFVgV8FcUlhLmofrKcczbus6lFD74kgD2yIfGGU/A8kUfwPXiZUDDpzL7QC3IGLUu31VgQ8g==
 
+single-spa@^5.8.2:
+  version "5.8.2"
+  resolved "https://registry.yarnpkg.com/single-spa/-/single-spa-5.8.2.tgz#e5b816612d61e6750dec79d42bc992c6f8c0db34"
+  integrity sha512-Rz9hY3/Trm6HdXiyhIUikIiEZBqUQCxov4jwecFGATbTRMZHoTDWf211PFrUs0s7QdIDThyMQmizamULkibSAA==
+
 sisteransi@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/sisteransi/-/sisteransi-1.0.5.tgz#134d681297756437cc05ca01370d3a7a571075ed"
