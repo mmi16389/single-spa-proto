@@ -1,15 +1,15 @@
 import { registerApplication, start } from "single-spa";
 
-registerApplication({
-  name: "layout-app",
-  app: () => System.import("layout-app"),
-  activeWhen: ["/"],
-});
+// registerApplication({
+//   name: "layout-app",
+//   app: () => System.import("layout-app"),
+//   activeWhen: ["/"],
+// });
 
 registerApplication({
   name: "admin-app",
   app: () => System.import("admin-app"),
-  activeWhen: ["/admin"],
+  activeWhen: (location) => true,
 });
 
 // registerApplication({

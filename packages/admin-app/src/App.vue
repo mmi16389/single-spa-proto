@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div id="nav">boooo booo</div>
+    <div id="nav">Single-spa with NPM package</div>
     <router-view />
   </div>
 </template>

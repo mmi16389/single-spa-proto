@@ -2,9 +2,10 @@
   "name": "admin-app",
   "version": "0.1.0",
   "private": true,
+  "main": "dist/admin-app.umd.js",
   "scripts": {
     "serve": "vue-cli-service serve --port 3001",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --target lib --formats umd --name admin-app src/main.ts",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint",
