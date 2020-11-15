@@ -42,7 +42,7 @@ export default class AppToolbar extends Vue {
 	}
 
 	navigateTo(url: string): void {
-		window.history.pushState("", "", url);
+		window.history.pushState("", "", "/" + url);
 	}
 }
 </script>
