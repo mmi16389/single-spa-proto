@@ -27,7 +27,7 @@ interface ToolbarLink {
 	options?: Options;
 }
 
-declare const MAINTENANCE: string;
+let MAINTENANCE: string;
 
 @Component
 export default class AppToolbar extends Vue {

@@ -42,7 +42,7 @@ interface ToolbarLink {
 }
 
 // Env var
-declare const MAINTENANCE: string;
+let MAINTENANCE: string;
 
 /** App is the main component */
 @Component({

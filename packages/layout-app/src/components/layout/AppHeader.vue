@@ -34,7 +34,7 @@ import Component from "vue-class-component";
 
 import HeaderMenu from "./HeaderMenu.vue";
 
-declare const MAINTENANCE: string;
+let MAINTENANCE: string;
 
 /** The Header of the application */
 @Component({

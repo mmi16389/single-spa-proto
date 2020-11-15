@@ -23,6 +23,6 @@ import FooterBtn from "@cnamts/vue-dot/src/patterns/FooterWrapper/FooterBtn";
 	},
 })
 export default class AppFooter extends Vue {
-	version = process.env.VUE_APP_VERSION;
+	version = "1.0.1"; //process.env.VUE_APP_VERSION;
 }
 </script>
