@@ -44,10 +44,10 @@
     "ts-config-single-spa": "^1.7.0"
   },
   "dependencies": {
+    "@cnamts/admin-app": "file:../admin-app",
     "@types/jest": "^25.2.1",
     "@types/systemjs": "^6.1.0",
     "@types/webpack-env": "^1.15.1",
-    "admin-app": "file:../admin-app",
     "copy-webpack-plugin": "^6.3.1",
     "eslint-loader": "^4.0.2",
     "single-spa": "^5.3.1",

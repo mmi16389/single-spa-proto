@@ -885,6 +885,18 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
+"@cnamts/admin-app@file:../admin-app":
+  version "0.1.0"
+  dependencies:
+    core-js "^3.6.5"
+    serve "^11.3.2"
+    single-spa-vue "^1.9.0"
+    systemjs-webpack-interop "^2.1.2"
+    vue "^2.6.11"
+    vue-class-component "^7.2.3"
+    vue-property-decorator "^8.4.2"
+    vue-router "^3.2.0"
+
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@istanbuljs/load-nyc-config/-/load-nyc-config-1.1.0.tgz#fd3db1d59ecf7cf121e80650bb86712f9b55eced"
@@ -1490,18 +1502,6 @@ acorn@^7.1.0, acorn@^7.1.1:
   version "7.4.1"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-7.4.1.tgz#feaed255973d2e77555b83dbc08851a6c63520fa"
   integrity sha512-nQyp0o1/mNdbTO1PO6kHkwSrmgZ0MT/jCCpNiwbUjGoRN4dlBhqJtoQuCnEOKzgTVwg0ZWiCoQy6SxMebQVh8A==
-
-"admin-app@file:../admin-app":
-  version "0.1.0"
-  dependencies:
-    core-js "^3.6.5"
-    serve "^11.3.2"
-    single-spa-vue "^1.9.0"
-    systemjs-webpack-interop "^2.1.2"
-    vue "^2.6.11"
-    vue-class-component "^7.2.3"
-    vue-property-decorator "^8.4.2"
-    vue-router "^3.2.0"
 
 aggregate-error@^3.0.0:
   version "3.1.0"

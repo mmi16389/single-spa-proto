@@ -8,7 +8,7 @@ import { registerApplication, start } from "single-spa";
 
 registerApplication({
   name: "admin-app",
-  app: () => System.import("admin-app"),
+  app: () => System.import("@cnamts/admin-app"),
   activeWhen: (location) => true,
 });
 
