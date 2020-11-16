@@ -1,3 +1,3 @@
 import { setPublicPath } from "systemjs-webpack-interop";
 
-setPublicPath("admin-app", 2);
+setPublicPath("admin-app", 1);

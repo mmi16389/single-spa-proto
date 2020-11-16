@@ -17,13 +17,6 @@ module.exports = {
     },
   },
   chainWebpack: (config) => {
-    config.externals([
-      "bootstrap",
-      "bootstrap-vue",
-      "single-spa-vue",
-      "vue",
-      "vue-router",
-      "vue-toastr",
-    ]);
+    config.externals(["vue"]);
   },
 };

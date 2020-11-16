@@ -52,7 +52,7 @@
         "imports": {
           "@cnamts/root-config": "//localhost:9000/cnamts-root-config.js",
           "layout-app": "//localhost:3000/js/app.js",
-          "admin-app": "//localhost:3001/js/app.js",
+          "admin-app": "//localhost:3001/remoteEntry.js",
           "vue": "https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js",
           "vue-i18n": "https://unpkg.com/vue-i18n/dist/vue-i18n.js"
         }
@@ -64,10 +64,33 @@
     Learn more about why at https://single-spa.js.org/docs/ecosystem-angular/#zonejs
   -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/zone.js@0.10.3/dist/zone.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@1.16.0/dist/import-map-overrides.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/systemjs@6.4.0/dist/system.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/systemjs@6.4.0/dist/extras/amd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/systemjs@6.4.0/dist/extras/named-exports.js"></script>
   </head>
 
   <body>
-    <script src="/cnamts-root-config.js"></script>
+    <script>
+      (function () {
+        Promise.all([System.import("single-spa"), System.import("vue")]).then(
+          function (modules) {
+            var singleSpa = modules[0];
+            var Vue = modules[1];
+            var VueRouter = modules[2];
+
+            singleSpa.registerApplication(
+              "admin-app",
+              () => System.import("admin-app"),
+              (location) => true
+            );
+
+            singleSpa.start();
+          }
+        );
+      })();
+    </script>
+    <!-- <script src="/cnamts-root-config.js"></script> -->
     <!-- <script>
       System.import("@cnamts/root-config");
     </script> -->
