@@ -10,8 +10,4 @@ declare global {
       [elem: string]: any;
     }
   }
-  interface System {
-    import(request: string): Promise<any>;
-  }
-  let System: System;
 }

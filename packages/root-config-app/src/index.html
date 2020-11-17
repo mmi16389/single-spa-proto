@@ -52,9 +52,8 @@
         "imports": {
           "@cnamts/root-config": "//localhost:9000/cnamts-root-config.js",
           "layout-app": "//localhost:3000/js/app.js",
-          "admin-app": "//localhost:3001/remoteEntry.js",
-          "vue": "https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js",
-          "vue-i18n": "https://unpkg.com/vue-i18n/dist/vue-i18n.js"
+          "@cnamt/home-parcel": "//localhost:8081/js/app.js",
+          "admin-app": "//localhost:3001/remoteEntry.js"
         }
       }
     </script>
@@ -73,24 +72,22 @@
   <body>
     <script>
       (function () {
-        Promise.all([System.import("single-spa"), System.import("vue")]).then(
-          function (modules) {
-            var singleSpa = modules[0];
-            var Vue = modules[1];
-            var VueRouter = modules[2];
+        Promise.all([System.import("single-spa")]).then(function (modules) {
+          var singleSpa = modules[0];
+          var Vue = modules[1];
+          var VueRouter = modules[2];
 
-            singleSpa.registerApplication(
-              "admin-app",
-              () =>
-                System.import("admin-app").catch((err) => {
-                  System.import("./cnamts-root-config.js");
-                }),
-              (location) => true
-            );
+          singleSpa.registerApplication(
+            "admin-app",
+            () =>
+              System.import("admin-app").catch((err) => {
+                System.import("./cnamts-root-config.js");
+              }),
+            (location) => true
+          );
 
-            singleSpa.start();
-          }
-        );
+          singleSpa.start();
+        });
       })();
     </script>
     <div id="admin"></div>

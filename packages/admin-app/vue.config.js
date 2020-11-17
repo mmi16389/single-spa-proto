@@ -17,6 +17,6 @@ module.exports = {
     },
   },
   chainWebpack: (config) => {
-    config.externals(["vue"]);
+    config.externals(["@cnamt/home-parcel"]);
   },
 };

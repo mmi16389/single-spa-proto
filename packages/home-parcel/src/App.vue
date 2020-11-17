@@ -1,20 +1,13 @@
 <template>
   <div id="app">
-    <HomeParcel />
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
+    </div>
+    <router-view />
   </div>
 </template>
-<script lang="ts">
-import Vue from "vue";
-import Component from "vue-class-component";
-import HomeParcel from "./components/HomeParcel.vue";
 
-@Component({
-  components: {
-    HomeParcel,
-  },
-})
-export default class App extends Vue {}
-</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
