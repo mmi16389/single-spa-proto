@@ -1,6 +1,6 @@
 # Single Spa Framework Microfrontend
 
-Ce proto est un exemple l'utilisation du framework `single-spa` basé sur l'architecture Micro Frontend.
+Ce proto est un exemple d'utilisation du framework `single-spa` basé sur l'architecture Micro Frontend.
 
 ## ROOT config
 
