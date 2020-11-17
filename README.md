@@ -4,7 +4,7 @@ Ce proto est un exemple d'utilisation du framework `single-spa` basé sur l'arch
 
 ## ROOT config
 
-L'application `root-config-app` est le coeur auquel on souscrit tous les micrfrontends: single-spa application
+L'application `root-config-app` est le coeur auquel on souscrit tous les microfrontends: single-spa application
 1 - `admin-app` : single-spa application[localhost:3001](http://localhost:3001/)
 2 - `home-app` : single-spa application[localhost:3003](http://localhost:3003/)
 3 - `layout-app` : single-spa application[localhost:3002](http://localhost:3002/)
