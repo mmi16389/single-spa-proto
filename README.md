@@ -13,4 +13,7 @@ L'application `root-config-app` est le coeur, à laquelle on souscrit tous les m
 
 # Running Demo
 
-- Run `yarn serve` . cela permet en parellel de demarrer toutes les microfrontends
+- Installer les deps de chaque projet avec: `yarn ou npm i`
+- Lancer separement chaque microfrontend(`admin-app`,`home-app`, `layout-app`) avec la commande: Run `yarn serve` . Verifier qu'il n'y a aucune erreur `lint` sinon   faire un `yarn lint` pour corriger toutes les erreurs de `lint ou eslint` puis relancer la commande: `yarn serve`
+- Puis lancer en dernier l'application `root-config-app` avec la commande: `yarn serve`
+ 
