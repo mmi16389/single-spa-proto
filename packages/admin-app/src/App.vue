@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div id="nav">boooo booo</div>
+    <div id="nav">Microfrontend single-spa app Admin</div>
     <router-view />
   </div>
 </template>

@@ -10,12 +10,6 @@ export default {
 			},
 		},
 		{
-			label: "Assure",
-			to: {
-				name: "assure",
-			},
-		},
-		{
 			label: "Admin",
 			to: {
 				name: "admin",

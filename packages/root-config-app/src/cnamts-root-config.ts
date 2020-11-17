@@ -7,6 +7,12 @@ registerApplication({
 });
 
 registerApplication({
+  name: "home-app",
+  app: () => System.import("home-app"),
+  activeWhen: ["/home"],
+});
+
+registerApplication({
   name: "admin-app",
   app: () => System.import("admin-app"),
   activeWhen: ["/admin"],

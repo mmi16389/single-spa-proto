@@ -18,7 +18,7 @@
 			<!-- <RouterView /> -->
 		</VMain>
 
-		<AppFooter v-if="!maintenance" />
+		<!-- <AppFooter v-if="!maintenance" /> -->
 	</VApp>
 </template>
 
