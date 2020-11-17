@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div id="nav">Je suis tres heureux</div>
+    <div id="nav">Microfrontend, load from browsermodule</div>
     <router-view />
   </div>
 </template>
