@@ -1,21 +1,21 @@
 import { registerApplication, start } from "single-spa";
 
 registerApplication({
-  name: "layout-app",
-  app: () => System.import("layout-app"),
-  activeWhen: ["/"],
+	name: "layout-app",
+	app: () => System.import("layout-app"),
+	activeWhen: ["/"],
 });
 
 registerApplication({
-  name: "home-app",
-  app: () => System.import("home-app"),
-  activeWhen: ["/home"],
+	name: "home-app",
+	app: () => System.import("home-app"),
+	activeWhen: ["/home"],
 });
 
 registerApplication({
-  name: "admin-app",
-  app: () => System.import("admin-app"),
-  activeWhen: ["/admin"],
+	name: "admin-app",
+	app: () => System.import("admin-app"),
+	activeWhen: ["/admin"],
 });
 
 // registerApplication({
@@ -25,5 +25,5 @@ registerApplication({
 // });
 
 start({
-  urlRerouteOnly: true,
+	urlRerouteOnly: true,
 });

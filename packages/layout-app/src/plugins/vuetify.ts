@@ -5,15 +5,9 @@ import Vuetify from "vuetify/lib";
 
 import fr from "vuetify/src/locale/fr";
 
-// Import theme colors
-import { themeColors } from "@/theme/colors";
-
 Vue.use(Vuetify);
 
 export const vuetify = new Vuetify({
-	theme: {
-		themes: themeColors,
-	},
 	icons: {
 		iconfont: "mdiSvg",
 	},

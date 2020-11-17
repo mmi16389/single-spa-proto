@@ -10,7 +10,7 @@ export default {
 			},
 		},
 		{
-			label: "Admin",
+			label: "Exemple",
 			to: {
 				name: "admin",
 			},

@@ -1,6 +1,7 @@
 import "./set-public-path";
 import Vue from "vue";
 import singleSpaVue from "single-spa-vue";
+import vuetify from "./plugins/vuetify";
 
 import App from "./App.vue";
 import router from "./router";
@@ -8,12 +9,13 @@ import router from "./router";
 Vue.config.productionTip = false;
 
 const vueLifecycles = singleSpaVue({
-  Vue,
-  appOptions: {
-    el: "#admin",
-    render: (h: any) => h(App),
-    router,
-  },
+	Vue,
+	appOptions: {
+		el: "#admin",
+		render: (h: any) => h(App),
+		router,
+		vuetify,
+	},
 });
 
 export const bootstrap = vueLifecycles.bootstrap;
