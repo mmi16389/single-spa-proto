@@ -81,7 +81,10 @@
 
             singleSpa.registerApplication(
               "admin-app",
-              () => System.import("admin-app"),
+              () =>
+                System.import("admin-app").catch((err) => {
+                  System.import("./cnamts-root-config.js");
+                }),
               (location) => true
             );
 
@@ -90,11 +93,6 @@
         );
       })();
     </script>
-    <!-- <script src="/cnamts-root-config.js"></script> -->
-    <!-- <script>
-      System.import("@cnamts/root-config");
-    </script> -->
-
     <div id="admin"></div>
     <import-map-overrides-full
       show-when-local-storage="devtools"
