@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Header />
     <HomeParcel />
   </div>
 </template>
@@ -7,13 +8,18 @@
 import Vue from "vue";
 import Component from "vue-class-component";
 import HomeParcel from "./components/HomeParcel.vue";
+import { publicApiFunction, Header } from "@cnamts/shared-module";
 
 @Component({
   components: {
     HomeParcel,
   },
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+  created() {
+    publicApiFunction();
+  }
+}
 </script>
 <style>
 #app {

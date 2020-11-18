@@ -1,5 +1,5 @@
 <template>
-  <div id="parcel">my god</div>
+  <div id="parcel" />
   <!-- <HomeParcel/> -->
 </template>
 <script lang="ts">

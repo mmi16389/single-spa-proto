@@ -17,6 +17,6 @@ module.exports = {
     },
   },
   chainWebpack: (config) => {
-    config.externals(["@cnamt/home-parcel"]);
+    config.externals(["@cnamt/home-parcel", "@cnamts/shared-module"]);
   },
 };
