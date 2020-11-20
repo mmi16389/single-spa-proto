@@ -2,17 +2,18 @@
   "name": "@cnamts/admin-app",
   "version": "0.1.0",
   "private": true,
-  "main": "dist/app.js",
   "scripts": {
     "serve": "vue-cli-service serve --port 3001",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint",
-    "prod": "serve dist -p 5001",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "prod": "serve dist -p 5001"
   },
+  "main": "dist/app.js",
   "dependencies": {
+    "@babel/polyfill": "^7.4.4",
     "core-js": "^3.6.5",
     "serve": "^11.3.2",
     "single-spa-vue": "^1.9.0",
@@ -20,7 +21,8 @@
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.3",
     "vue-property-decorator": "^8.4.2",
-    "vue-router": "^3.2.0"
+    "vue-router": "^3.2.0",
+    "vuetify": "^2.2.11"
   },
   "devDependencies": {
     "@types/jest": "^24.0.19",
@@ -45,6 +47,7 @@
     "lint-staged": "^9.5.0",
     "typescript": "~3.9.3",
     "vue-cli-plugin-single-spa": "~1.3.2",
+    "vue-cli-plugin-vuetify": "~2.0.7",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
@@ -76,7 +79,8 @@
   "browserslist": [
     "> 1%",
     "last 2 versions",
-    "not dead"
+    "not dead",
+    "not ie <= 10"
   ],
   "jest": {
     "preset": "@vue/cli-plugin-unit-jest/presets/typescript-and-babel"

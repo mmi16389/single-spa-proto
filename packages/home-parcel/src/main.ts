@@ -4,6 +4,7 @@ import singleSpaVue from "single-spa-vue";
 
 import App from "./App.vue";
 import router from "./router";
+import HelloWorld from "./components/HelloWorld.vue";
 
 Vue.config.productionTip = false;
 

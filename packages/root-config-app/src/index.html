@@ -52,9 +52,11 @@
         "imports": {
           "@cnamts/root-config": "//localhost:9000/cnamts-root-config.js",
           "layout-app": "//localhost:3000/js/app.js",
-          "@cnamt/home-parcel": "//localhost:8081/js/app.js",
+          "@cnamt/home-parcel": "//localhost:3002/js/app.js",
           "admin-app": "//localhost:3001/remoteEntry.js",
-          "@cnamts/shared-module": "//localhost:3000/cnamts-shared-module.js"
+          "@cnamts/shared-module": "//localhost:3000/cnamts-shared-module.js",
+          "vue": "https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js",
+          "vuetify": "https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"
         }
       }
     </script>
@@ -75,8 +77,8 @@
       (function () {
         Promise.all([System.import("single-spa")]).then(function (modules) {
           var singleSpa = modules[0];
-          var Vue = modules[1];
-          var VueRouter = modules[2];
+          var vuetify = modules[1];
+          var Vue = modules[2];
 
           singleSpa.registerApplication(
             "admin-app",
