@@ -1,16 +1,21 @@
 pipeline {
-  agent {
-    dockerfile {
-      filename 'Jenkinsfile'
-    }
+    agent any
 
-  }
-  stages {
-    stage('Test') {
-      steps {
-        sh 'node --version'
-      }
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
     }
-
-  }
 }
