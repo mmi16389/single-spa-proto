@@ -1,10 +1,9 @@
 pipeline {
     agent docker
-
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                yarn add
             }
         }
         stage('Test') {
