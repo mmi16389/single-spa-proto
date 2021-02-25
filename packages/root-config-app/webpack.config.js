@@ -14,11 +14,14 @@ module.exports = {
     publicPath: "/",
     filename: "[name].js",
   },
+  resolve: {
+    modules: [__dirname, "node_modules"],
+  },
   module: {
     rules: [
       {
         parser: {
-          system: true,
+          system: false,
         },
       },
       {
@@ -45,7 +48,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/index.html"),
-      inject: false,
+      inject: true,
     }),
   ],
   devtool: "source-map",
