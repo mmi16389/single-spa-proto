@@ -1,8 +1,6 @@
 pipeline {
     agent {
-      docker {
-        image 'docker'
-      }
+        label 'docker'
     }
     stages {
         stage('Installation') {
