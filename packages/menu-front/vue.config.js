@@ -8,6 +8,9 @@ const {
 module.exports = {
 	devServer: {
 		writeToDisk: true,
+		headers: {
+			"Access-Control-Allow-Origin": "*",
+		},
 	},
 	configureWebpack: {
 		entry: {
@@ -17,9 +20,6 @@ module.exports = {
 			filename: "[name].js",
 			libraryTarget: "umd",
 			path: path.resolve(__dirname, "dist"),
-		},
-		headers: {
-			"Access-Control-Allow-Origin": "*",
 		},
 	},
 	chainWebpack: (config) => {
