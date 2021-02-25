@@ -1,11 +1,11 @@
 pipeline {
     agent {
-        label 'linux'
+        label 'node'
     }
     stages {
         stage('Installation') {
             steps {
-                docker --version
+                npm install
             }
         }
         stage('Test') {
