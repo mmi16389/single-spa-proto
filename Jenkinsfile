@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Installation') {
             steps {
-                npm install
+                docker --version
             }
         }
         stage('Test') {
