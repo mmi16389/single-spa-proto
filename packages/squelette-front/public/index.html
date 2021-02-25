@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta name="importmap-type" content="systemjs-importmap" />
+		<title>Root Config</title>
+		<script src="https://cdn.jsdelivr.net/npm/regenerator-runtime@0.13.5/runtime.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/systemjs@6.4.0/dist/system.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/systemjs@6.4.0/dist/extras/amd.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/systemjs@6.4.0/dist/extras/named-exports.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.js"></script>
+		<script type="systemjs-importmap">
+			<%= JSON.stringify(importmaps) %>
+		</script>
+	</head>
+
+	<body>
+		<script>
+			System.import("@cnamts/root-config");
+		</script>
+		<div id="menu-front"></div>
+		<% if (isLocal) { %>
+		<script
+			type="text/javascript"
+			src="//localhost:3003/js/config.js"
+		></script>
+		<script
+			type="text/javascript"
+			src="//localhost:9000/js/config.js"
+		></script>
+		<% } else { %>
+		<script
+			type="text/javascript"
+			src="https://accueil-front-dev.digital.cnamts.fr/js/config.js"
+		></script>
+		<% } %>
+	</body>
+</html>

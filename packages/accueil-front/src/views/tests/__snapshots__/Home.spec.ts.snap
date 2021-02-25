@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home renders correctly 1`] = `
+<v-container-stub tag="div">
+  <div class="d-flex mb-6 justify-start flex-wrap"></div>
+</v-container-stub>
+`;

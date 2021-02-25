@@ -1,0 +1,2 @@
+const MENU_FRONT_VERSION = "3.0.0";
+const MENU_FRONT_MAINTENANCE = "false";
