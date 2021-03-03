@@ -8,9 +8,6 @@ const {
 module.exports = {
 	devServer: {
 		writeToDisk: true,
-		headers: {
-			"Access-Control-Allow-Origin": "*",
-		},
 	},
 	configureWebpack: {
 		entry: {
