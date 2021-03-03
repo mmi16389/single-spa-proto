@@ -6,9 +6,9 @@ pipeline {
                 sh 'yarn'
             }
         }
-        stage('lint') {
+        stage('build') {
             steps {
-                sh 'yarn lint'
+                sh 'yarn build'
             }
         }
     }
