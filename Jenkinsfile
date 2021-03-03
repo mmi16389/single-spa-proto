@@ -1,9 +1,14 @@
 pipeline {
     agent any
     stages {
-        stage('Test') {
+        stage('install') {
             steps {
                 sh 'yarn'
+            }
+        }
+        stage('lint') {
+            steps {
+                sh 'yarn lint'
             }
         }
     }
